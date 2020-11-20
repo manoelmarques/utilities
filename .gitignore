@@ -1,7 +1,14 @@
+# MacOSX
+.DS_Store
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
+
+# editor files
+.vscode/
+.idea/
 
 # C extensions
 *.so
