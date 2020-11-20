@@ -2,11 +2,11 @@
 This python script is supposed to run from inside the repo root folder
 """
 import os
-from .command import execute
-from .filter_repo import fix_links
-
+import sys
 
 def main():
+    from utilities.command import execute
+    from utilities.filter_repo import fix_links
     cmd = [
         'git', 'filter-repo',
         '--path', 'qiskit/aqua/utils',
@@ -22,4 +22,6 @@ def main():
 
 
 if __name__ == '__main__':
+    sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+    print(sys.path)
     main()
