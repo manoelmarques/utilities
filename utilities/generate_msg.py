@@ -1,8 +1,25 @@
 """
 This python script is supposed to run from inside the repo root folder
 """
+from typing import List
 import os
 import sys
+
+UTILS_ROOT = [
+    'qiskit/aqua/utils/arithmetic.py',
+    'qiskit/aqua/utils/backend_utils.py',
+    'qiskit/aqua/utils/circuit_utils.py',
+    'qiskit/aqua/utils/entangler_map.py',
+    'qiskit/aqua/utils/measurement_error_mitigation.py',
+    'qiskit/aqua/utils/name_unnamed_args.py',
+    'qiskit/aqua/utils/run_circuits.py',
+    'qiskit/aqua/utils/subsystem.py',
+    'qiskit/aqua/utils/validation.py',
+    'qiskit/aqua/aqua_globals.py',
+    'qiskit/aqua/quantum_instance.py',
+    'qiskit/aqua/aqua_error.py',
+    'qiskit/aqua/missing_optional_library_error.py',
+]
 
 aqua_prefix = "https://github.com/Qiskit/qiskit-aqua/tree/fe939b1eee848a8dea1810810ff8e90374170e97/"
 
@@ -19,24 +36,8 @@ def generate_co_authors(paths):
     return authors
 
 
-def main():
-    paths = [
-        'qiskit/aqua/utils/arithmetic.py',
-        'qiskit/aqua/utils/backend_utils.py',
-        'qiskit/aqua/utils/circuit_utils.py',
-        'qiskit/aqua/utils/entangler_map.py',
-        'qiskit/aqua/utils/measurement_error_mitigation.py',
-        'qiskit/aqua/utils/name_unnamed_args.py',
-        'qiskit/aqua/utils/run_circuits.py',
-        'qiskit/aqua/utils/subsystem.py',
-        'qiskit/aqua/utils/validation.py',
-        'qiskit/aqua/aqua_globals.py',
-        'qiskit/aqua/quantum_instance.py',
-        'qiskit/aqua/aqua_error.py',
-        'qiskit/aqua/missing_optional_library_error.py',
-    ]
+def main(paths: List[str], dest_mod: str) -> None:
     authors = generate_co_authors(paths)
-    dest_module = 'qiskit.utils'
     links = []
     sources = []
     for path in paths:
@@ -58,4 +59,4 @@ def main():
 
 if __name__ == '__main__':
     sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-    main()
+    main(UTILS_ROOT, 'qiskit.utils')
