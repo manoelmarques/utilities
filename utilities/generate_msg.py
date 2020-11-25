@@ -33,7 +33,7 @@ def generate_co_authors(paths):
         co_authors_list = out.strip().decode('utf8')
         for line in co_authors_list.splitlines():
             authors.add(' '.join(line.split()[1:]))
-    return authors
+    return sorted(authors, key=str.casefold)
 
 
 def main(paths: List[str], dest_mod: str) -> None:
