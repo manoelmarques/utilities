@@ -36,4 +36,4 @@ def main(cmd: List[str]) -> None:
 
 if __name__ == '__main__':
     sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-    main(CMD + UTILS_ROOT)
+    main(CMD + OP_FLOW)

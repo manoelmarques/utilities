@@ -21,18 +21,24 @@ UTILS_ROOT = [
     'qiskit/aqua/missing_optional_library_error.py',
 ]
 
-aqua_prefix = "https://github.com/Qiskit/qiskit-aqua/tree/fe939b1eee848a8dea1810810ff8e90374170e97/"
+OP_FLOW = ['qiskit/aqua/operators']
+
+# aqua_prefix_root = "https://github.com/Qiskit/qiskit-aqua/tree/fe939b1eee848a8dea1810810ff8e90374170e97/"
+aqua_prefix_opfl = "https://github.com/Qiskit/qiskit-aqua/tree/049b9459474ecb36ceefcc8dbceb646d7f037e0f/"
 
 
 def generate_co_authors(paths):
     from utilities.command import execute
     authors = set()
     for path in paths:
-        cmd = ['git', 'shortlog', '--summary', '--follow', '--numbered', '--email', path]
+        # cmd = ['git', 'shortlog', '--summary', '--follow', '--numbered', '--email', '--', path]
+        # cmd = ['git', 'shortlog', '-sne', '--', path]
+        cmd = ['git', 'log', '--follow', path]
         out = execute(cmd, cwd=os.getcwd())
         co_authors_list = out.strip().decode('utf8')
         for line in co_authors_list.splitlines():
-            authors.add(' '.join(line.split()[1:]))
+            if 'Author:' in line:
+                authors.add(' '.join(line.split()[1:]))
     return sorted(authors, key=str.casefold)
 
 
@@ -42,11 +48,12 @@ def main(paths: List[str], dest_mod: str) -> None:
     sources = []
     for path in paths:
         sources.append(path)
-        links.append(aqua_prefix + path)
+        links.append(aqua_prefix_opfl + path)
 
     msg = 'Migrate:\n\n' + '\n'.join(sources) + '\n\nfrom qiskit-aqua to qiskit-terra.\n'
     msg += 'This commit migrates the above from the qiskit-aqua package '
-    msg += 'to live in qiskit.utils and qiskit.exceptions (last 2 files).\n'
+    # msg += 'to live in qiskit.utils and qiskit.exceptions (last 2 files).\n'
+    msg += 'to live in qiskit.opflow.\n'
     msg += 'They were originally copied from:\n\n' + '\n'.join(links) + '.\n\n'
     msg += 'You can refer to that for the full development history leading up until this point.\n\n'
     msg += '\n'.join(['Co-authored-by: %s' % x for x in authors])
@@ -59,4 +66,5 @@ def main(paths: List[str], dest_mod: str) -> None:
 
 if __name__ == '__main__':
     sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-    main(UTILS_ROOT, 'qiskit.utils')
+    # main(UTILS_ROOT, 'qiskit.utils')
+    main(OP_FLOW, 'qiskit.opflow')
