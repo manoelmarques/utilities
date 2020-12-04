@@ -7,23 +7,13 @@ import sys
 
 CMD = ['git', 'filter-repo']
 
-UTILS_ROOT = [
-    '--path', 'qiskit/aqua/utils/arithmetic.py',
-    '--path', 'qiskit/aqua/utils/backend_utils.py',
-    '--path', 'qiskit/aqua/utils/circuit_utils.py',
-    '--path', 'qiskit/aqua/utils/entangler_map.py',
-    '--path', 'qiskit/aqua/utils/measurement_error_mitigation.py',
-    '--path', 'qiskit/aqua/utils/name_unnamed_args.py',
-    '--path', 'qiskit/aqua/utils/run_circuits.py',
-    '--path', 'qiskit/aqua/utils/subsystem.py',
-    '--path', 'qiskit/aqua/utils/validation.py',
-    '--path', 'qiskit/aqua/aqua_globals.py',
-    '--path', 'qiskit/aqua/quantum_instance.py',
-]
 
-OP_FLOW = [
-    '--path', 'qiskit/aqua/operators',
-]
+def prepare_array(src: List[str]) -> List[str]:
+    ret_list = []
+    for path in src:
+        ret_list.append('--path')
+        ret_list.append(path)
+    return ret_list
 
 
 def main(cmd: List[str]) -> None:
@@ -36,4 +26,6 @@ def main(cmd: List[str]) -> None:
 
 if __name__ == '__main__':
     sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-    main(CMD + OP_FLOW)
+    import utilities.globals as glb
+    # main(CMD + prepare_array(glb.OP_FLOW))
+    main(CMD + prepare_array(glb.ALGORITHMS))
