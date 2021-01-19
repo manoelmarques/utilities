@@ -1,4 +1,9 @@
 
+OPTIMIZATION_ROOT = [
+    'qiskit/optimization',
+    'test/optimization'
+]
+
 UTILS_ROOT = [
     'qiskit/aqua/utils/arithmetic.py',
     'qiskit/aqua/utils/backend_utils.py',
@@ -81,3 +86,6 @@ UNIT_TESTS = [
 aqua_prefix_root = "https://github.com/Qiskit/qiskit-aqua/tree/fe939b1eee848a8dea1810810ff8e90374170e97/"
 aqua_prefix_opfl = "https://github.com/Qiskit/qiskit-aqua/tree/049b9459474ecb36ceefcc8dbceb646d7f037e0f/"
 aqua_prefix_algo = "https://github.com/Qiskit/qiskit-aqua/tree/049b9459474ecb36ceefcc8dbceb646d7f037e0f/"
+
+
+optmization_prefix_root = 'https://github.com/Qiskit/qiskit-aqua/tree/e24639146d77a0de80e296274049cdb58d8c516b/'

@@ -28,4 +28,5 @@ if __name__ == '__main__':
     sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
     import utilities.globals as glb
     # main(CMD + prepare_array(glb.OP_FLOW))
-    main(CMD + prepare_array(glb.ALGORITHMS))
+    # main(CMD + prepare_array(glb.ALGORITHMS))
+    main(CMD + prepare_array(glb.OPTIMIZATION_ROOT))
