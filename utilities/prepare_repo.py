@@ -30,4 +30,5 @@ if __name__ == '__main__':
     # main(CMD + prepare_array(glb.OP_FLOW))
     # main(CMD + prepare_array(glb.ALGORITHMS))
     # main(CMD + prepare_array(glb.OPTIMIZATION_ROOT))
-    main(CMD + prepare_array(glb.FINANCE_ROOT))
+    # main(CMD + prepare_array(glb.FINANCE_ROOT))
+    main(CMD + prepare_array(glb.CHEMISTRY_ROOT))
