@@ -1,4 +1,13 @@
 
+
+FINANCE_ROOT = [
+    'qiskit/finance/applications',
+    'qiskit/finance/data_providers',
+    'qiskit/finance/__init__.py',
+    'qiskit/finance/exceptions.py',
+    'test/finance'
+]
+
 OPTIMIZATION_ROOT = [
     'qiskit/optimization',
     'test/optimization'
@@ -86,6 +95,5 @@ UNIT_TESTS = [
 aqua_prefix_root = "https://github.com/Qiskit/qiskit-aqua/tree/fe939b1eee848a8dea1810810ff8e90374170e97/"
 aqua_prefix_opfl = "https://github.com/Qiskit/qiskit-aqua/tree/049b9459474ecb36ceefcc8dbceb646d7f037e0f/"
 aqua_prefix_algo = "https://github.com/Qiskit/qiskit-aqua/tree/049b9459474ecb36ceefcc8dbceb646d7f037e0f/"
-
-
 optmization_prefix_root = 'https://github.com/Qiskit/qiskit-aqua/tree/e24639146d77a0de80e296274049cdb58d8c516b/'
+finance_prefix_root = 'https://github.com/Qiskit/qiskit-aqua/tree/0a062cd31597548136a7564129276df5cb5478b6/'
