@@ -5,7 +5,7 @@ from typing import List
 import os
 import sys
 
-CMD = ['git', 'filter-repo']
+CMD = ['git', 'filter-repo', '--force']
 
 
 def prepare_array(src: List[str]) -> List[str]:
@@ -31,4 +31,5 @@ if __name__ == '__main__':
     # main(CMD + prepare_array(glb.ALGORITHMS))
     # main(CMD + prepare_array(glb.OPTIMIZATION_ROOT))
     # main(CMD + prepare_array(glb.FINANCE_ROOT))
-    main(CMD + prepare_array(glb.CHEMISTRY_ROOT))
+    # main(CMD + prepare_array(glb.CHEMISTRY_ROOT))
+    main(CMD + prepare_array(glb.NATURE_ROOT))

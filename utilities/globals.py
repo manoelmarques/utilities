@@ -1,4 +1,13 @@
 
+NATURE_ROOT = [
+    'qiskit/chemistry/operators',
+    'qiskit/chemistry/mappings',
+    'qiskit/chemistry/operator_transformations',
+    'qiskit_nature/mappings',
+    'qiskit_nature/operators',
+    'qiskit_nature/transformations'
+]
+
 CHEMISTRY_ROOT = [
     'qiskit/chemistry',
     'test/chemistry'
