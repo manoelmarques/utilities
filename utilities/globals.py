@@ -1,4 +1,19 @@
 
+ML_ROOT = {
+    'qiskit/aqua/algorithms/classifiers',
+    'qiskit/aqua/algorithms/distribution_learners',
+    'qiskit/aqua/components/multiclass_extensions',
+    'qiskit/aqua/components/neural_networks',
+    'qiskit/aqua/utils/dataset_helper.py',
+    'qiskit/aqua/utils/qp_solver.py',
+    'qiskit/ml',
+    'test/aqua/test_sklearn_svm.py',
+    'test/aqua/test_qgan.py',
+    'test/aqua/test_qsvm.py',
+    'test/aqua/test_vqc.py',
+    'test/ml'
+}
+
 NATURE_ROOT = [
     'qiskit/chemistry/operators',
     'qiskit/chemistry/mappings',
@@ -111,3 +126,4 @@ aqua_prefix_algo = "https://github.com/Qiskit/qiskit-aqua/tree/049b9459474ecb36c
 optimization_prefix_root = 'https://github.com/Qiskit/qiskit-aqua/tree/e24639146d77a0de80e296274049cdb58d8c516b/'
 finance_prefix_root = 'https://github.com/Qiskit/qiskit-aqua/tree/0a062cd31597548136a7564129276df5cb5478b6/'
 chemistry_prefix_root = 'https://github.com/Qiskit/qiskit-aqua/tree/7775410f4dabf09ec9f933bf411ead434550accf/'
+ml_prefix_root = 'https://github.com/Qiskit/qiskit-aqua/tree/13b31d5f91dbb58d865c7e5277a23e59010fd8c5/'
