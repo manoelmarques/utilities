@@ -16,21 +16,22 @@ def prepare_array(src: List[str]) -> List[str]:
     return ret_list
 
 
-def main(cmd: List[str]) -> None:
+def main(cmd: List[str], repo: str) -> None:
     from utilities.command import execute
     from utilities.filter_repo import fix_links
     out = execute(cmd=cmd, cwd=os.getcwd())
     print(out.strip().decode('utf-8'))
-    fix_links()
+    fix_links(repo)
 
 
 if __name__ == '__main__':
     sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
     import utilities.globals as glb
-    # main(CMD + prepare_array(glb.OP_FLOW))
-    # main(CMD + prepare_array(glb.ALGORITHMS))
-    # main(CMD + prepare_array(glb.OPTIMIZATION_ROOT))
-    # main(CMD + prepare_array(glb.FINANCE_ROOT))
-    # main(CMD + prepare_array(glb.CHEMISTRY_ROOT))
-    # main(CMD + prepare_array(glb.NATURE_ROOT))
-    main(CMD + prepare_array(glb.ML_ROOT))
+    # main(CMD + prepare_array(glb.OP_FLOW), glb.AQUA_REPO)
+    # main(CMD + prepare_array(glb.ALGORITHMS), glb.AQUA_REPO)
+    # main(CMD + prepare_array(glb.OPTIMIZATION_ROOT), glb.AQUA_REPO)
+    # main(CMD + prepare_array(glb.FINANCE_ROOT), glb.AQUA_REPO)
+    # main(CMD + prepare_array(glb.CHEMISTRY_ROOT), glb.AQUA_REPO)
+    # main(CMD + prepare_array(glb.NATURE_ROOT), glb.AQUA_REPO)
+    # main(CMD + prepare_array(glb.ML_ROOT), glb.AQUA_REPO)
+    main(CMD + prepare_array(glb.TUTORIALS_ROOT), glb.TUTORIALS_REPO)

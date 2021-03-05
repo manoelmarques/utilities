@@ -1,4 +1,11 @@
 
+AQUA_REPO = 'Qiskit/qiskit-aqua'
+TUTORIALS_REPO = 'Qiskit/qiskit-tutorials'
+
+TUTORIALS_ROOT = {
+    'tutorials/optimization',
+}
+
 ML_ROOT = {
     'qiskit/aqua/algorithms/classifiers',
     'qiskit/aqua/algorithms/distribution_learners',
@@ -127,3 +134,4 @@ optimization_prefix_root = 'https://github.com/Qiskit/qiskit-aqua/tree/e24639146
 finance_prefix_root = 'https://github.com/Qiskit/qiskit-aqua/tree/0a062cd31597548136a7564129276df5cb5478b6/'
 chemistry_prefix_root = 'https://github.com/Qiskit/qiskit-aqua/tree/7775410f4dabf09ec9f933bf411ead434550accf/'
 ml_prefix_root = 'https://github.com/Qiskit/qiskit-aqua/tree/13b31d5f91dbb58d865c7e5277a23e59010fd8c5/'
+tutorials_prefix_root = 'https://github.com/Qiskit/qiskit-tutorials/tree/e2e5a240e381e5b418d5ef0b318731a6f2146863/'
