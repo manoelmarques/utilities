@@ -2,6 +2,10 @@
 AQUA_REPO = 'Qiskit/qiskit-aqua'
 TUTORIALS_REPO = 'Qiskit/qiskit-tutorials'
 
+TUTORIALS_ML_ROOT = {
+    'tutorials/machine_learning',
+}
+
 TUTORIALS_FINANCE_ROOT = {
     'tutorials/finance',
 }
@@ -140,3 +144,4 @@ chemistry_prefix_root = 'https://github.com/Qiskit/qiskit-aqua/tree/7775410f4dab
 ml_prefix_root = 'https://github.com/Qiskit/qiskit-aqua/tree/13b31d5f91dbb58d865c7e5277a23e59010fd8c5/'
 tutorials_optimization_prefix_root = 'https://github.com/Qiskit/qiskit-tutorials/tree/e2e5a240e381e5b418d5ef0b318731a6f2146863/'
 tutorials_finance_prefix_root = 'https://github.com/Qiskit/qiskit-tutorials/tree/4c4c07d6e9902ed48bdb4c2ebff07d4b4f34b2b1/'
+tutorials_ml_prefix_root = 'https://github.com/Qiskit/qiskit-tutorials/tree/4c4c07d6e9902ed48bdb4c2ebff07d4b4f34b2b1/'
