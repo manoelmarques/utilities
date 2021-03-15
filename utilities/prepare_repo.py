@@ -36,4 +36,5 @@ if __name__ == '__main__':
     # main(CMD + prepare_array(glb.ML_ROOT), glb.AQUA_REPO)
     # main(CMD + prepare_array(glb.TUTORIALS_OPTIMIZATION_ROOT), glb.TUTORIALS_REPO)
     # main(CMD + prepare_array(glb.TUTORIALS_FINANCE_ROOT), glb.TUTORIALS_REPO)
-    main(CMD + prepare_array(glb.TUTORIALS_ML_ROOT), glb.TUTORIALS_REPO)
+    # main(CMD + prepare_array(glb.TUTORIALS_ML_ROOT), glb.TUTORIALS_REPO)
+    main(CMD + prepare_array(glb.TUTORIALS_CHEMISTRY_ROOT), glb.TUTORIALS_REPO)
